@@ -14,7 +14,7 @@ const Home: NextPage = () => {
       <Header />
         <div className="p-10">
           <h1 className="text-xl font-bold text-center">
-            Homet
+            Home
           </h1>
         </div>
       <Footer />
