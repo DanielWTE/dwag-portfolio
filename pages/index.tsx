@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Footer from '../components/footer'
 import Header from '../components/header'
+import Welcomer from '../components/welcomer'
 
 const Home: NextPage = () => {
   return (
@@ -12,11 +13,9 @@ const Home: NextPage = () => {
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <Header />
-        <div className="p-10">
-          <h1 className="text-xl font-bold text-center">
-            Home
-          </h1>
-        </div>
+        <section className="p-10">
+          <Welcomer />
+        </section>
       <Footer />
     </div>
   );
