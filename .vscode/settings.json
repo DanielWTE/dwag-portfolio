@@ -1,0 +1,12 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "eslint.validate": [
+        "typescript"
+    ],
+    "eslint.packageManager": "yarn",
+    "discord.detailsEditing": "Editing",
+    "discord.detailsDebugging": "Debugging",
+    "discord.removeLowerDetails": true
+}
