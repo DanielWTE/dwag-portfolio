@@ -4,6 +4,8 @@ import Image from 'next/image'
 import Footer from '../components/footer'
 import Header from '../components/header'
 import Welcomer from '../components/welcomer'
+import About from '../components/about'
+import Timeline from '../components/timeline'
 
 const Home: NextPage = () => {
   return (
@@ -15,6 +17,12 @@ const Home: NextPage = () => {
       <Header />
         <section className="p-10">
           <Welcomer />
+        </section>
+        <section>
+          <About />
+        </section>
+        <section>
+          <Timeline />
         </section>
       <Footer />
     </div>

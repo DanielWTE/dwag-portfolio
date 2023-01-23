@@ -13,12 +13,12 @@ const Welcomer = () => {
                 <h1 className="font-bold text-7xl text-left mb-5">
                     Daniel Wagner
                 </h1>
-                <p className="text-lg text-left font-normal mb-5 flex-wrap">
-                    Mehr als siuuu kann ich leider noch nicht sagen :/
+                <p className="text-lg text-left font-normal mb-5 flex-wrap max-w-md">
+                    This is my personal website, you can find my projects, something about me, and more here.
                 </p>
                 <Link href="/projects">
                 <a className="font-semibold text-white md:mt-10 mt-5 pt-5 bg-blue-500 rounded-md w-60 h-16 text-lg hover:bg-gray-700 hover:-translate-y-1 hover:scale-105 duration-200 ease-in-out transition">
-                    Meine Projekte
+                    My Projects
                 </a>
                 </Link>
             </div>
