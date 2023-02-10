@@ -8,7 +8,7 @@ const Footer = () => {
             <div className="p-5">
                 <ul className="text-center">
                     <p className="text-slate-200 font-bold text-3x1 pb-2">
-                        by <span className="text-blue-400">dwag</span>
+                       by <span className="text-blue-400">dwag 🤙</span>
                     </p>
                     <div className="text-indigo-200 font-bold text-xs">
                         <Link href="/imprint">
