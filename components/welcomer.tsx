@@ -6,6 +6,7 @@ import image from '../public/profile.png'
 const Welcomer = () => {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const pathLength = isOpen ? 400 : 200;
+  
 
   return (
     <div>
