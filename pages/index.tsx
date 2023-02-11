@@ -31,9 +31,9 @@ const Home: NextPage = () => {
         <section>
           <Skills />
         </section>
-        <section>
+        {/* <section>
           <Contact />
-        </section>
+        </section> */}
       <Footer />
     </div>
   );

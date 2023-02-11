@@ -6,7 +6,7 @@ import { faCheckCircle, faTimesCircle, faExclamationCircle, faTimes } from "@for
 const Contact = () => {
     return (
         <div>
-            <h1 className='font-bold text-5xl text-white flex flex-col align-center justify-center text-center mt-20'>
+            <h1 className='font-bold text-5xl text-white flex flex-col align-center justify-center text-center mt-14'>
                 Contact
             </h1>
       </div>

@@ -1,10 +1,18 @@
-import {FaTwitter} from "react-icons/fa"
+import {FaBars} from "react-icons/fa"
 import Link from "next/link"
 import { useRouter } from "next/router";
+import { useState, useEffect } from "react";
 
-export const Header = () => {
+export const Header = ({initialIsOpen}) => {
 
     const route = useRouter();
+    const [isOpen, setOpen] = useState(initialIsOpen);
+
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            localStorage.setItem("menuState", JSON.stringify(isOpen));
+        }
+    }, [isOpen]);
 
     return (
         <header>
@@ -15,17 +23,20 @@ export const Header = () => {
                         <Link href="/">
                         <a className="font-bold text-xl text-slate-200">dwag</a>
                         </Link>
+                        <button className="md:hidden" onClick={() => setOpen(!isOpen)}>
+                            <FaBars className="fill-current text-slate-200 hover:text-white" />
+                        </button>
                     </div>
-                    <div className="hidden md:flex flex-col md:flex-row md:ml-auto mt-3 md:mt-0">
+                    <div className={`md:flex flex-col md:flex-row md:ml-auto mt-3 md:mt-0 ${isOpen ? "block" : "hidden"}`}>
                         <Link href="/">
                         <a className={route.pathname == '/' ? 'font-bold bg-gray-700 rounded-lg p-2 lg:px-4 md:mx-2 text-slate-100 rounded hover:bg-gray-500 transition-colors duration-300' : "font-bold p-2 lg:px-4 md:mx-2 text-slate-200 rounded hover:bg-gray-500 rounded-lg transition-colors duration-300"}>Home</a>
                         </Link>
                         <Link href="/projects">
                         <a className={route.pathname == '/projects' ? 'font-bold bg-gray-700 rounded-lg p-2 lg:px-4 md:mx-2 text-slate-100 rounded hover:bg-gray-500 transition-colors duration-300' : " font-bold p-2 lg:px-4 md:mx-2 text-slate-200 rounded hover:bg-gray-500 rounded-lg transition-colors duration-300"}>Projects</a>
                         </Link>
-                        <Link href="/blog">
+                        {/* <Link href="/blog">
                         <a className={route.pathname == '/blog' ? 'font-bold bg-gray-700 rounded-lg p-2 lg:px-4 md:mx-2 text-slate-100 rounded hover:bg-gray-500 transition-colors duration-300' : " font-bold p-2 lg:px-4 md:mx-2 text-slate-200 rounded hover:bg-gray-500 rounded-lg transition-colors duration-300"}>Blog</a>
-                        </Link>
+                        </Link> */}
                     </div>
                 </div>
             </nav>
@@ -34,13 +45,12 @@ export const Header = () => {
     );
 };
 
-{/* <ul className="text-center">
-                    <p className="text-slate-200 font-bold text-3x1 pb-2 hover:text-slate-200 hover:animate-pulse">
-                        Personal Website
-                    </p>
-                    <div className="text-indigo-200 font-bold text-xs">
-                        <p>Daniel Wagner</p>
-                    </div>
-                </ul> */}
+Header.getInitialProps = async () => {
+    const initialIsOpen = typeof window !== "undefined" ? JSON.parse(localStorage.getItem("menuState")) : false;
+
+    return {
+        initialIsOpen
+    };
+};
 
 export default Header;
