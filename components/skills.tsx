@@ -43,6 +43,7 @@ const Skills = () => {
                 <Widget icon="nodejs" text="NodeJS" />
                 <Widget icon="mysql" text="MySQL" />
                 <Widget icon="mongodb" text="MongoDB" />
+                <Widget icon="oracle" text="Oracle" />
                 <Widget icon="git" text="Git" />
             </div>
         {/* <div className="font-bold text-2xl text-white flex flex-col align-center justify-center text-center mt-10">
