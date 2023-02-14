@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 
 
-const Widget = ({ icon, text }) => {
+const Widget = ({ icon, text } : any) => {
     return (
     <div className={`bg-gray-800 p-4 rounded-xl flex items-center transition-colors duration-300 hover:bg-gray-600`}>
           <i className={`devicon-${icon}-plain text-xl`} />
@@ -14,6 +14,7 @@ const Widget = ({ icon, text }) => {
 
 Widget.propTypes = {
     icon: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired
 }
 
 const Skills = () => {
