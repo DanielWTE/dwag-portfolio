@@ -40,7 +40,7 @@ const Project_grid = () => {
     return (
       <div>
         {/* Search Filter bar */}
-        <div className="flex flex-row justify-between items-center w-full">
+        {/* <div className="flex flex-row justify-between items-center w-full">
           <div className="flex flex-row items-center space-x-4">
             <div className="flex flex-row items-center space-x-2">
               <label htmlFor="search" className="text-gray-500">Search</label>
@@ -63,7 +63,7 @@ const Project_grid = () => {
               <option value="name">Name</option>
             </select>
           </div>
-        </div>
+        </div> */}
 
         {/* Project Card Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
