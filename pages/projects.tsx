@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Footer from '../components/footer'
 import Header from '../components/header'
 import Headercomp from '../components/headercomp'
+import Project_grid from '../components/project_grid'
 
 const Projects: NextPage = () => {
   return (
@@ -16,6 +17,9 @@ const Projects: NextPage = () => {
       <Header />
         <section>
           <Headercomp />
+        </section>
+        <section>
+          <Project_grid />
         </section>
       <Footer />
     </div>
