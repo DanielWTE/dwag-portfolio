@@ -3,7 +3,7 @@ import Link from "next/link"
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 
-export const Header = ({initialIsOpen}) => {
+export const Header = ({initialIsOpen} : any) => {
 
     const route = useRouter();
     const [isOpen, setOpen] = useState(initialIsOpen);
