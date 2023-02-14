@@ -6,9 +6,6 @@ const Headercomp = () => {
           <h1 className="font-bold text-5xl sm:text-7xl text-left mb-5">
             Projects
           </h1>
-          <p className="text-base sm:text-lg text-left font-normal mb-5 flex-wrap max-w-md">
-              ##########
-          </p>
         </div>
       </div>
     </div>

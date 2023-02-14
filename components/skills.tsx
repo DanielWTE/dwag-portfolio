@@ -29,7 +29,7 @@ const Skills = () => {
                 Web
             </h1> */}
         </div>
-            <div className="min-h-100vh clear-both flex align-center justify-center mt-6 flex-wrap gap-2">
+            <div className="min-h-100vh clear-both flex align-center justify-center mt-6 flex-wrap gap-2 max-w-screen-xl">
                 <Widget icon="html5" text="HTML" />
                 <Widget icon="javascript" text="JavaScript" />
                 <Widget icon="typescript" text="TypeScript" />
