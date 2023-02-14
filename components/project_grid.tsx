@@ -4,23 +4,30 @@ import PropTypes from 'prop-types'
 
 
 const ProjectCard = ({ image, title, description, url, tags, date } : any) => {
+  {/* Project Card with rounded corners and dark background smooth and modern with shadow*/}  
     return (
-      <div className="bg-white rounded-md shadow-md p-4">
+      <div className="bg-gray-900 rounded-md shadow-md">
         <div className="relative h-48 w-full">
-          <Image src={image} layout="fill" objectFit="cover" className="rounded-md" />
+          <Image src={image} layout="fill" objectFit="cover" className="rounded-t-md" />
         </div>
-        <div className="flex flex-col justify-center items-start space-y-2">
-          <h2 className="text-xl font-bold">{title}</h2>
+        <div className="p-4">
+          <h3 className="text-xl font-semibold">{title}</h3>
           <p className="text-gray-500">{description}</p>
-          <div className="flex flex-row justify-between items-center w-full">
-            <Link href={url}>
-              <a className="text-blue-400">Learn More</a>
-            </Link>
-            <div className="flex flex-row items-center space-x-2">
-              <span className="text-gray-500">{date}</span>
-              <span className="text-gray-500">{tags}</span>
-            </div>
+          <div className="flex flex-row space-x-2">
+            {tags.split(",").map((tag: string) => (
+              <div key={tag} className="px-2 py-1 bg-gray-700 rounded-md text-sm font-semibold">
+                {tag}
+              </div>
+            ))}
           </div>
+          <p className="text-gray-500 text-sm">{date}</p>
+        </div>
+        <div className="flex justify-end">
+          <Link href={url}>
+            <a className="px-4 py-2 bg-gray-800 text-white text-sm font-semibold rounded-bl-md rounded-br-md">
+              View
+            </a>
+          </Link>
         </div>
       </div>
     );
@@ -31,7 +38,7 @@ ProjectCard.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   url: PropTypes.string,
-  tags: PropTypes.string,
+  tags: PropTypes.array,
   date: PropTypes.string
 }
 
@@ -65,40 +72,40 @@ const Project_grid = () => {
           </div>
         </div> */}
 
-        {/* Project Card Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <ProjectCard
-            image="/img/project1.jpg"
-            title="Project 1"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae arcu nec erat luctus tincidunt."
-            url="#"
-            tags="web, mobile, game"
-            date="2021-01-01"
-          />
-          <ProjectCard
-            image="/img/project2.jpg"
-            title="Project 2"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae arcu nec erat luctus tincidunt."
-            url="#"
-            tags="web, mobile, game"
-            date="2021-01-01"
-          />
-          <ProjectCard
-            image="/img/project3.jpg"
-            title="Project 3"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae arcu nec erat luctus tincidunt."
-            url="#"
-            tags="web, mobile, game"
-            date="2021-01-01"
-          />
-          <ProjectCard
-            image="/img/project4.jpg"
-            title="Project 4"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae arcu nec erat luctus tincidunt."
-            url="#"
-            tags="web, mobile, game"
-            date="2021-01-01"
-          />
+          {/* Project Card Grid  with flex*/}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <ProjectCard
+              image="/images/nextjs.png"
+              title="Next.js"
+              description="The React Framework for Production"
+              url="https://nextjs.org/"
+              tags={["React", "Next.js", "TypeScript", "Example"]}
+              date="2021-09-04"
+            />
+            <ProjectCard
+              image="/images/nextjs.png"
+              title="Next.js"
+              description="The React Framework for Production"
+              url="https://nextjs.org/"
+              tags={["React", "Next.js", "TypeScript", "Example"]}
+              date="2021-09-04"
+            />
+            <ProjectCard
+              image="/images/nextjs.png"
+              title="Next.js"
+              description="The React Framework for Production"
+              url="https://nextjs.org/"
+              tags={["React", "Next.js", "TypeScript", "Example"]}
+              date="2021-09-04"
+            />
+            <ProjectCard
+              image="/images/nextjs.png"
+              title="Next.js"
+              description="The React Framework for Production"
+              url="https://nextjs.org/"
+              tags={["React", "Next.js", "TypeScript", "Example"]}
+              date="2021-09-04"
+            />
         </div>
       </div>
     );
