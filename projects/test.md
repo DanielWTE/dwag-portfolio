@@ -2,6 +2,8 @@
 title: 'Next.js page options and how they work'
 metaTitle: 'Next.js page options and how they work'
 metaDesc: 'How to use pages in Next.js exploring the options'
+website: 'https://lab.wglc.at'
+github: 'https://lab.wglc.at'
 ---
 
 Creating pages is an integral part of any framework. Today we'll be looking at three different types of pages that we can leverage in Next.js.

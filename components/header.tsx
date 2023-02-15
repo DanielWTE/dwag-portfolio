@@ -46,7 +46,8 @@ export const Header = ({initialIsOpen} : any) => {
 };
 
 Header.getInitialProps = async () => {
-    const initialIsOpen = typeof window !== "undefined" ? JSON.parse(localStorage.getItem("menuState")) : false;
+    const menuStateJSON = localStorage.getItem("menuState");
+    const initialIsOpen = typeof window !== "undefined" ? JSON.parse(menuStateJSON) : false;
 
     return {
         initialIsOpen
