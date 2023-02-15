@@ -2,6 +2,8 @@ import { motion, useCycle } from "framer-motion";
 import Image from 'next/image'
 import Link from 'next/link';
 import image from '../public/profile.png'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
 const Welcomer = () => {
   const [isOpen, toggleOpen] = useCycle(false, true);
@@ -42,11 +44,18 @@ const Welcomer = () => {
           <p className="text-base sm:text-lg text-left font-normal mb-5 flex-wrap max-w-md">
             This is my personal website, you can find my projects, something about me, and more here.
           </p>
-          <Link href="/projects">
-            <a className="font-semibold text-white sm:mt-10 mt-5 pt-5 bg-blue-500 rounded-md w-full sm:w-52 h-16 text-base sm:text-lg hover:bg-gray-700 hover:-translate-y-1 duration-200 ease-in-out transition">
-              My Projects
-            </a>
-          </Link>
+          <div className="flex flex-wrap gap-6">
+            <Link href="/projects">
+              <a className="font-semibold text-white sm:mt-10 mt-5 pt-5 bg-blue-500 rounded-md w-full sm:w-48 h-16 text-base sm:text-lg hover:bg-gray-700 hover:-translate-y-1 duration-200 ease-in-out transition">
+                My Projects
+              </a>
+            </Link>
+            <Link href="https://resume.dwag.me">
+              <a className="font-semibold text-white sm:mt-10 mt-5 pt-5 bg-blue-500 rounded-md w-full sm:w-32 h-16 text-base sm:text-lg hover:bg-gray-700 hover:-translate-y-1 duration-200 ease-in-out transition">
+              <FontAwesomeIcon icon={faDownload} /> Resume
+              </a>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
