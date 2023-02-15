@@ -5,22 +5,20 @@ import Footer from '../../components/footer'
 import Header from '../../components/header'
 
 export async function getStaticPaths() {
-    const files = fs.readdirSync('projects');
-
+    const files = fs.readdirSync('posts');
     const paths = files.map((fileName) => ({
-        params: {
+      params: {
         slug: fileName.replace('.md', ''),
-        },
+      },
     }));
-
     return {
-        paths,
-        fallback: false,
+      paths,
+      fallback: false,
     };
-}
-
-export async function getStaticProps({ params: { project  } } : any) {
-    const fileName = fs.readFileSync(`projects/${project}.md`, 'utf-8');
+  }
+  
+  export async function getStaticProps({ params: { slug } } : any) {
+    const fileName = fs.readFileSync(`posts/${slug}.md`, 'utf-8');
     const { data: frontmatter, content } = matter(fileName);
     return {
       props: {
@@ -28,9 +26,9 @@ export async function getStaticProps({ params: { project  } } : any) {
         content,
       },
     };
-}
+  }
 
-export default function ProjectPage({ frontmatter, content } : any) {
+export default function PostPage({ frontmatter, content } : any) {
     return (
       <div className='prose mx-auto'>
         <Header />
