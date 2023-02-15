@@ -46,12 +46,12 @@ export default function PostPage({ frontmatter, content } : any) {
             <h1>{frontmatter.title}</h1>
               <div className="flex gap-10">
                 <Link href={frontmatter.website}>
-                  <a target="_blank" rel="noopener noreferrer" className="text-white sm:mt-10 mt-5 pt-5 bg-blue-500 rounded-md h-10 text-base sm:text-lg hover:bg-gray-700 hover:-translate-y-1 duration-200 ease-in-out transition flex gap-4" >
+                  <a target="_blank" rel="noopener noreferrer" className="text-white mt-5 pt-5 bg-blue-500 rounded-md h-10 text-base sm:text-lg hover:bg-gray-700 hover:-translate-y-1 duration-200 ease-in-out transition flex gap-4" >
                     <FontAwesomeIcon icon={faGlobe} /> Project Website
                   </a>
                 </Link>
                 <Link href={frontmatter.github}>
-                  <a target="_blank" rel="noopener noreferrer" className="text-white sm:mt-10 mt-5 pt-5 bg-blue-500 rounded-md h-10 text-base sm:text-lg hover:bg-gray-700 hover:-translate-y-1 duration-200 ease-in-out transition flex gap-4" >
+                  <a target="_blank" rel="noopener noreferrer" className="text-white mt-5 pt-5 bg-blue-500 rounded-md h-10 text-base sm:text-lg hover:bg-gray-700 hover:-translate-y-1 duration-200 ease-in-out transition flex gap-4" >
                     <FontAwesomeIcon icon={faCode} /> GitHub
                   </a>
                 </Link>
