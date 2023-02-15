@@ -1,6 +1,7 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 import md from 'markdown-it';
+import Head from 'next/head';
 import Footer from '../../components/footer'
 import Header from '../../components/header'
 
@@ -30,10 +31,17 @@ export async function getStaticPaths() {
 
 export default function PostPage({ frontmatter, content } : any) {
     return (
-      <div className='prose mx-auto'>
+      <div>
+        <Head>
+          <title>dwag - {frontmatter.metaTitle}</title>
+          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+          <meta name="description" content={frontmatter.metaDesc} />
+        </Head>
         <Header />
-        <h1>{frontmatter.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: md().render(content) }} />
+        <div className='prose mx-auto'>
+          <h1>{frontmatter.title}</h1>
+          <div dangerouslySetInnerHTML={{ __html: md().render(content) }} />
+        </div>
         <Footer />
       </div>
     );
