@@ -27,7 +27,7 @@ export const Header = ({initialIsOpen} : any) => {
                             <FaBars className="fill-current text-slate-200 hover:text-white" />
                         </button>
                     </div>
-                    <div className={`md:flex flex-col md:flex-row md:ml-auto mt-3 md:mt-0 ${isOpen ? "block" : "hidden"}`}>
+                    <div className={`flex items-end gap-1 md:flex flex-col md:flex-row md:ml-auto mt-3 md:mt-0 ${isOpen ? "block" : "hidden"}`}>
                         <Link href="/">
                         <a className={route.pathname == '/' ? 'font-bold bg-gray-700 rounded-lg p-2 lg:px-4 md:mx-2 text-slate-100 rounded hover:bg-gray-500 transition-colors duration-300' : "font-bold p-2 lg:px-4 md:mx-2 text-slate-200 rounded hover:bg-gray-500 rounded-lg transition-colors duration-300"}>Home</a>
                         </Link>
@@ -46,9 +46,8 @@ export const Header = ({initialIsOpen} : any) => {
 };
 
 Header.getInitialProps = async () => {
-    const menuStateJSON = localStorage.getItem("menuState");
-    const initialIsOpen = typeof window !== "undefined" ? JSON.parse(menuStateJSON) : false;
-
+const menuStateJSON = localStorage.getItem("menuState");
+const initialIsOpen = typeof window !== "undefined" ? JSON.parse(menuStateJSON || "false") : false;
     return {
         initialIsOpen
     };

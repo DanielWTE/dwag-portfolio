@@ -1,6 +1,6 @@
 import fs from 'fs';
 import matter from 'gray-matter';
-import md from 'markdown-it';
+import md from "markdown-it";
 import Head from 'next/head';
 import Footer from '../../components/footer'
 import Header from '../../components/header'
@@ -32,7 +32,7 @@ export async function getStaticPaths() {
     };
   }
 
-export default function PostPage({ frontmatter, content } : any) {
+  export default function PostPage({ frontmatter, content }: any) {
     return (
       <div>
         <Head>
@@ -41,25 +41,29 @@ export default function PostPage({ frontmatter, content } : any) {
           <meta name="description" content={frontmatter.metaDesc} />
         </Head>
         <Header />
-	      <div>
+        <div>
           <div className='prose prose-invert mx-auto mt-12 mb-12'>
             <h1>{frontmatter.title}</h1>
-              <div className="flex gap-10">
+            <div className="flex gap-6">
+              {frontmatter.website && (
                 <div>
                   <Link href={frontmatter.website}>
-                    <a target="_blank" rel="noopener noreferrer" className="text-white mt-5 pt-5 bg-blue-500 rounded-md h-10 text-base sm:text-lg hover:bg-gray-700 hover:-translate-y-1 duration-200 ease-in-out transition flex gap-4" >
+                    <a target="_blank" rel="noopener noreferrer" className="text-white mt-5 px-4 no-underline bg-blue-500 rounded-md h-10 text-base sm:text-lg hover:bg-gray-700 hover:-translate-y-1 duration-200 ease-in-out transition flex gap-2 items-center justify-center">
                       <FontAwesomeIcon icon={faGlobe} /> Project Website
                     </a>
                   </Link>
                 </div>
+              )}
+              {frontmatter.github && (
                 <div>
                   <Link href={frontmatter.github}>
-                    <a target="_blank" rel="noopener noreferrer" className="text-white mt-5 pt-5 bg-blue-500 rounded-md h-10 text-base sm:text-lg hover:bg-gray-700 hover:-translate-y-1 duration-200 ease-in-out transition flex gap-4" >
+                    <a target="_blank" rel="noopener noreferrer" className="text-white mt-5 px-4 no-underline bg-blue-500 rounded-md h-10 text-base sm:text-lg hover:bg-gray-700 hover:-translate-y-1 duration-200 ease-in-out transition flex gap-2 items-center justify-center">
                       <FontAwesomeIcon icon={faCode} /> GitHub
                     </a>
                   </Link>
                 </div>
-              </div>
+              )}
+            </div>
             <div dangerouslySetInnerHTML={{ __html: md().render(content) }} />
           </div>
         </div>

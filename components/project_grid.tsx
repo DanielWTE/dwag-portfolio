@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 import PropTypes from 'prop-types'
 import homelabCover from '../public/homelabCover.jpg'
 import solunCover from '../public/solunCover.png'
@@ -8,46 +9,71 @@ import scraperCover from '../public/scraperCover.png'
 import educdiaCover from '../public/educdiaCover.png'
 
 
-const ProjectCard = ({ image, title, description, url, tags, date } : any) => {
-        {/* Project Card with rounded corners and dark background smooth and modern with shadow picture as cover on top*/}
-    return ( 
-<div className="flex flex-col items-center justify-center bg-gray-900 rounded-lg shadow-lg w-80 max-w-80">
-        {/* Image */}
-        <div className="w-full h-44 rounded-t-xl overflow-hidden flex justify-center items-center">
-          <Image src={image} alt={title} className="object-cover h-full w-full" width="340" height="190" />
+const ProjectCard = ({ image, title, description, url, tags, date }: any) => {
+  const [loading, setLoading] = useState(false);
+
+  const handleLoad = () => {
+    setLoading(false);
+  };
+
+  const handleError = () => {
+    setLoading(false);
+  };
+
+  return (
+    <div className="flex flex-col items-center justify-center bg-gray-900 rounded-lg shadow-lg w-80 max-w-80">
+      <div className="w-full h-44 rounded-t-xl overflow-hidden flex justify-center items-center">
+        {loading && (
+          <div className="w-full h-full flex justify-center items-center">
+            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-gray-500"></div>
+          </div>
+        )}
+        <Image
+          src={image}
+          alt={title}
+          className="object-cover h-full w-full"
+          width="340"
+          height="190"
+          onLoad={() => handleLoad()}
+          onError={() => handleError()}
+        />
+      </div>
+      <div className="flex flex-col items-center justify-start w-full p-4 space-y-2">
+        {/* Title */}
+        <div className="flex items-center justify-center w-full">
+          <h3 className="text-2xl font-bold text-gray-100">{title}</h3>
         </div>
-        {/* Details */}
-        <div className="flex flex-col items-center justify-start w-full p-4 space-y-2">
-          {/* Title */}
-          <div className="flex items-center justify-center w-full">
-            <h3 className="text-2xl font-bold text-gray-100">{title}</h3>
-          </div>
-          {/* Description */}
-          <div className="flex items-center justify-center text-center w-full">
-            <p className="text-gray-400">{description}</p>
-          </div>
-          {/* Link */}
-          <div className="flex items-center justify-center w-full">
-            <Link href={url}>
-              <a target="_blank" className="text-sm font-bold text-blue-500">Visit Site</a>
-            </Link>
-          </div>
-          {/* Tags */}
-          <div className="flex flex-wrap items-center justify-center w-full">
-            {tags.map((tag: any) => (
-              <div key={tag} className="px-2 py-1 m-1 text-sm font-medium text-gray-100 bg-gray-700 rounded-full">
-                {tag}
-              </div>
-            ))}
-          </div>
-          {/* Date */}
-          <div className="flex items-center justify-center w-full">
-            <p className="text-sm font-medium text-gray-400">{date}</p>
-          </div>
+        {/* Description */}
+        <div className="flex items-center justify-center text-center w-full">
+          <p className="text-gray-400">{description}</p>
+        </div>
+        {/* Link */}
+        <div className="flex items-center justify-center w-full">
+          <Link href={url}>
+            <a className="text-sm font-bold text-blue-500">
+              Learn More
+            </a>
+          </Link>
+        </div>
+        {/* Tags */}
+        <div className="flex flex-wrap items-center justify-center w-full">
+          {tags.map((tag: any) => (
+            <div
+              key={tag}
+              className="px-2 py-1 m-1 text-sm font-medium text-gray-100 bg-gray-700 rounded-full"
+            >
+              {tag}
+            </div>
+          ))}
+        </div>
+        {/* Date */}
+        <div className="flex items-center justify-center w-full">
+          <p className="text-sm font-medium text-gray-400">{date}</p>
         </div>
       </div>
-    );
-  };
+    </div>
+  );
+};
 
 ProjectCard.propTypes = {
   image: PropTypes.any,
@@ -94,7 +120,7 @@ const Project_grid = () => {
               image={homelabCover}
               title="Homelab"
               description="My Homelab is where I host and experiment with self-hosted services and applications."
-              url="https://lab.wglc.at/"
+              url="/project/homelab"
               tags={["Self-hosting", "Virtualization", "Automation", "Networking"]}
               date="Last Update 01.02.2023"
             />
