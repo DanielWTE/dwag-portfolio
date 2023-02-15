@@ -31,14 +31,14 @@ export async function getStaticPaths() {
 
 export default function PostPage({ frontmatter, content } : any) {
     return (
-      <div className="mt-12">
+      <div>
         <Head>
           <title>dwag - {frontmatter.metaTitle}</title>
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
           <meta name="description" content={frontmatter.metaDesc} />
         </Head>
         <Header />
-        <div className='prose mx-auto'>
+        <div className='prose mx-auto mt-12'>
           <h1>{frontmatter.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: md().render(content) }} />
         </div>
