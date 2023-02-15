@@ -43,7 +43,7 @@ const Welcomer = () => {
             This is my personal website, you can find my projects, something about me, and more here.
           </p>
           <Link href="/projects">
-            <a className="font-semibold text-white sm:mt-10 mt-5 pt-5 bg-blue-500 rounded-md w-full sm:w-60 h-16 text-base sm:text-lg hover:bg-gray-700 hover:-translate-y-1 hover:scale-105 duration-200 ease-in-out transition">
+            <a className="font-semibold text-white sm:mt-10 mt-5 pt-5 bg-blue-500 rounded-md w-full sm:w-52 h-16 text-base sm:text-lg hover:bg-gray-700 hover:-translate-y-1 duration-200 ease-in-out transition">
               My Projects
             </a>
           </Link>

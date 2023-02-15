@@ -6,6 +6,7 @@ import Footer from '../../components/footer'
 import Header from '../../components/header'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
+import Link from 'next/link';
 
 export async function getStaticPaths() {
     const files = fs.readdirSync('projects');
@@ -43,13 +44,17 @@ export default function PostPage({ frontmatter, content } : any) {
 	      <div>
           <div className='prose prose-invert mx-auto mt-12 mb-12'>
             <h1>{frontmatter.title}</h1>
-              <div className="flex justify-between gap-10">
-                <a href={frontmatter.website} target="_blank" rel="noopener noreferrer" className="text-white sm:mt-10 mt-5 pt-5 bg-blue-500 rounded-md w-full sm:w-40 h-12 text-base sm:text-lg hover:bg-gray-700 hover:-translate-y-1 duration-200 ease-in-out transition">
-                  <FontAwesomeIcon icon={faGlobe} /> Project Website
-                </a>
-                <a href={frontmatter.github} target="_blank" rel="noopener noreferrer" className="text-white sm:mt-10 mt-5 pt-5 bg-blue-500 rounded-md w-full sm:w-40 h-12 text-base sm:text-lg hover:bg-gray-700 hover:-translate-y-1 duration-200 ease-in-out transition">
-                  <i className={`devicon-github-plain text-xl`} /> GitHub
-                </a>
+              <div className="flex flex-wrap gap-10">
+                <Link href={frontmatter.website}>
+                  <a target="_blank" rel="noopener noreferrer" className="text-white sm:mt-10 mt-5 pt-5 bg-blue-500 rounded-md w-full h-10 text-base sm:text-lg hover:bg-gray-700 hover:-translate-y-1 duration-200 ease-in-out transition" >
+                    <FontAwesomeIcon icon={faGlobe} /> Project Website
+                  </a>
+                </Link>
+                <Link href={frontmatter.github}>
+                  <a target="_blank" rel="noopener noreferrer" className="text-white sm:mt-10 mt-5 pt-5 bg-blue-500 rounded-md w-full h-10 text-base sm:text-lg hover:bg-gray-700 hover:-translate-y-1 duration-200 ease-in-out transition" >
+                    <i className="devicon-git-plain text-xl" /> GitHub
+                  </a>
+                </Link>
               </div>
             <div dangerouslySetInnerHTML={{ __html: md().render(content) }} />
           </div>
