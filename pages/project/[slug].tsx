@@ -6,7 +6,7 @@ import Footer from '../../components/footer'
 import Header from '../../components/header'
 
 export async function getStaticPaths() {
-    const files = fs.readdirSync('posts');
+    const files = fs.readdirSync('projects');
     const paths = files.map((fileName) => ({
       params: {
         slug: fileName.replace('.md', ''),
@@ -19,7 +19,7 @@ export async function getStaticPaths() {
   }
   
   export async function getStaticProps({ params: { slug } } : any) {
-    const fileName = fs.readFileSync(`posts/${slug}.md`, 'utf-8');
+    const fileName = fs.readFileSync(`projects/${slug}.md`, 'utf-8');
     const { data: frontmatter, content } = matter(fileName);
     return {
       props: {
@@ -31,7 +31,7 @@ export async function getStaticPaths() {
 
 export default function PostPage({ frontmatter, content } : any) {
     return (
-      <div>
+      <div className="mt-12">
         <Head>
           <title>dwag - {frontmatter.metaTitle}</title>
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
