@@ -45,16 +45,20 @@ export default function PostPage({ frontmatter, content } : any) {
           <div className='prose prose-invert mx-auto mt-12 mb-12'>
             <h1>{frontmatter.title}</h1>
               <div className="flex gap-10">
-                <Link href={frontmatter.website}>
-                  <a target="_blank" rel="noopener noreferrer" className="text-white mt-5 pt-5 bg-blue-500 rounded-md h-10 text-base sm:text-lg hover:bg-gray-700 hover:-translate-y-1 duration-200 ease-in-out transition flex gap-4" >
-                    <FontAwesomeIcon icon={faGlobe} /> Project Website
-                  </a>
-                </Link>
-                <Link href={frontmatter.github}>
-                  <a target="_blank" rel="noopener noreferrer" className="text-white mt-5 pt-5 bg-blue-500 rounded-md h-10 text-base sm:text-lg hover:bg-gray-700 hover:-translate-y-1 duration-200 ease-in-out transition flex gap-4" >
-                    <FontAwesomeIcon icon={faCode} /> GitHub
-                  </a>
-                </Link>
+                <div className="flex flex-col sm:ml-10 sm:mt-10 mx-10 mt-10 text-center">
+                  <Link href={frontmatter.website}>
+                    <a target="_blank" rel="noopener noreferrer" className="text-white mt-5 pt-5 bg-blue-500 rounded-md h-10 text-base sm:text-lg hover:bg-gray-700 hover:-translate-y-1 duration-200 ease-in-out transition flex gap-4" >
+                      <FontAwesomeIcon icon={faGlobe} /> Project Website
+                    </a>
+                  </Link>
+                </div>
+                <div className="flex flex-col sm:ml-10 sm:mt-10 mx-10 mt-10 text-center">
+                  <Link href={frontmatter.github}>
+                    <a target="_blank" rel="noopener noreferrer" className="text-white mt-5 pt-5 bg-blue-500 rounded-md h-10 text-base sm:text-lg hover:bg-gray-700 hover:-translate-y-1 duration-200 ease-in-out transition flex gap-4" >
+                      <FontAwesomeIcon icon={faCode} /> GitHub
+                    </a>
+                  </Link>
+                </div>
               </div>
             <div dangerouslySetInnerHTML={{ __html: md().render(content) }} />
           </div>
