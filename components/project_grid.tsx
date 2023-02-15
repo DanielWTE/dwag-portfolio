@@ -128,7 +128,7 @@ const Project_grid = () => {
               image={solunCover}
               title="Solun"
               description="Solun is my self-built service to send private messages. Files and email services will be available soon."
-              url="https://msg.solun.pm/"
+              url="/project/solun"
               tags={["PHP", "JavaScript", "MySQL", "CSS", "HTML"]}
               date="Last Update 13.02.2023"
             />
@@ -136,7 +136,7 @@ const Project_grid = () => {
               image={bellebotCover}
               title="Discord Bot"
               description='I have developed a Discord bot with the name of a well-known actress of the somewhat "controversial" kind.'
-              url="https://belledelphine.gg/"
+              url="/project/discord-bot"
               tags={["NodeJS", "NPM", "TypeScript", "API", "DiscordJS"]}
               date="Last Update 10.12.2022"
             />
@@ -144,7 +144,7 @@ const Project_grid = () => {
               image={scraperCover}
               title="Various Scrapers"
               description="I have developed tools to scrape content from popular online marketplaces and store it on my database."
-              url="#"
+              url="/project/scraper"
               tags={["Python", "PHP", "MongoDB", "Docker", "Linux"]}
               date="Last Update 13.02.2023"
             />
@@ -152,7 +152,7 @@ const Project_grid = () => {
               image={educdiaCover}
               title="Various short projects"
               description="F.E. I have built a student management software - with which a school can manage many student data more easily."
-              url="https://github.com/DanielWTE/project-student-mgmt"
+              url="/project/short-projects"
               tags={["PHP", "JavaScript", "MongoDB", "Composer"]}
               date="Last Update 02.02.2023"
             />
