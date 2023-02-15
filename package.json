@@ -14,9 +14,10 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@nextui-org/react": "^1.0.0-beta.12",
     "@tailwindcss/line-clamp": "^0.4.2",
-    "@tailwindcss/typography": "^0.5.9",
     "devicon": "^2.15.1",
     "framer-motion": "^9.0.2",
+    "gray-matter": "^4.0.3",
+    "markdown-it": "^13.0.1",
     "next": "12.1.5",
     "prop-types": "^15.8.1",
     "react": "18.0.0",
@@ -25,6 +26,8 @@
     "tailwind-scrollbar-hide": "^1.1.7"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.9",
+    "@types/markdown-it": "^12.2.3",
     "@types/node": "17.0.25",
     "@types/react": "18.0.5",
     "@types/react-dom": "18.0.1",
