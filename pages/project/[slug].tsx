@@ -38,10 +38,12 @@ export default function PostPage({ frontmatter, content } : any) {
           <meta name="description" content={frontmatter.metaDesc} />
         </Head>
         <Header />
-        <div className='prose prose-invert mx-auto mt-12 mb-12'>
-          <h1>{frontmatter.title}</h1>
-          <div dangerouslySetInnerHTML={{ __html: md().render(content) }} />
-        </div>
+	<div>
+          <div className='prose prose-invert mx-auto mt-12 mb-12'>
+            <h1>{frontmatter.title}</h1>
+            <div dangerouslySetInnerHTML={{ __html: md().render(content) }} />
+          </div>
+	</div>
         <Footer />
       </div>
     );
