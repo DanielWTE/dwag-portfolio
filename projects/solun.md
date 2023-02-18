@@ -22,3 +22,9 @@ For Solun Message I have used following tools:
 2. JavaScript (JQuery, AJAX)
 3. MySQL
 
+## How does it work?
+The user enters a message, the message will be encrypted and stored in the database. The user will get a link to the message. 
+The link contains a random generated ID. 
+The colleague can open the link and the message will be decrypted, displayed and deleted from the database.
+
+![Solun Processing](../solunGif.gif)

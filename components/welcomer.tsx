@@ -13,18 +13,14 @@ const Welcomer = () => {
   return (
     <div>
       <div className="min-h-100vh clear-both flex align-center justify-center sm:mt-28 mt-12">
-        <div className="px-6 sm:px-12 flex content-center relative right-36 rotate-45 hidden xl:block">
+        <div className="px-6 sm:px-12 flex content-center relative right-36 hidden xl:block">
           <motion.div
             className="w-300 h-300 rounded-full overflow-hidden relative"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={() => toggleOpen()}
           >
-            <Image src={image} alt="Profile Picture" objectFit="cover" height="300px" width="300px" className="rounded-full duration-100"/>
-            <motion.svg
-              className="w-16 h-16 rounded-full overflow-hidden absolute top-0 left-0"
-              style={{ border: "3px solid white" }}
-            >
+            <Image src={image} alt="Profile Picture" objectFit="contain" height="350px" width="254px" className="rounded-full duration-100"/>
               <motion.path
                 fill="transparent"
                 stroke="white"
@@ -34,7 +30,6 @@ const Welcomer = () => {
                 animate={{ pathLength: isOpen ? 200 : 400 }}
                 transition={{ duration: 0.5, ease: "easeInOut" }}
               />
-            </motion.svg>
           </motion.div>
         </div>
         <div className="flex flex-col sm:ml-10 sm:mt-10 mx-10 mt-10 text-center">

@@ -7,6 +7,7 @@ import solunCover from '../public/solunCover.png'
 import bellebotCover from '../public/bellebotCover.png'
 import scraperCover from '../public/scraperCover.png'
 import educdiaCover from '../public/educdiaCover.png'
+import anipicCover from '../public/anipicCover.png'
 
 
 const ProjectCard = ({ image, title, description, url, tags, date }: any) => {
@@ -139,6 +140,14 @@ const Project_grid = () => {
               url="/project/discord-bot"
               tags={["NodeJS", "NPM", "TypeScript", "API", "DiscordJS"]}
               date="Last Update 10.12.2022"
+            />
+            <ProjectCard
+              image={anipicCover}
+              title="AniPic.co"
+              description='AniPic.co is a website where you can find anime pictures which are categorized by AI. Currently in development.'
+              url="/project/anipic"
+              tags={["MongoDB", "Linux", "Python", "PHP", "Docker"]}
+              date="Last Update 18.02.2023"
             />
             <ProjectCard
               image={scraperCover}

@@ -2,7 +2,7 @@
 title: 'My Homelab'
 metaTitle: 'My Homelab'
 metaDesc: 'In this article I will show you my homelab and how I use it.'
-website: 'https://lab.wglc.at'
+# website: 'https://lab.wglc.at'
 ---
 
 ## The first server
