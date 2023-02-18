@@ -68,7 +68,7 @@ I have bought following servers:
 1. HP DL360 G8
 2. GigaByte R281-N40
 
-![Servers](../homelabCover.jpg)
+![Servers](../homelabCover.png)
 
 ## But why do I need all of this?
 I've started my self-hosting journey to learn more about networking and servers in general.

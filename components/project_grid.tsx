@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import PropTypes from 'prop-types'
-import homelabCover from '../public/homelabCover.jpg'
+import homelabCover from '../public/homelabCover.png'
 import solunCover from '../public/solunCover.png'
 import bellebotCover from '../public/bellebotCover.png'
 import scraperCover from '../public/scraperCover.png'
