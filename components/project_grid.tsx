@@ -160,7 +160,7 @@ const Project_grid = () => {
             <ProjectCard
               image={educdiaCover}
               title="Various short projects"
-              description="F.E. I have built a student management software - with which a school can manage many student data more easily."
+              description="E.G. I have built a student management software - with which a school can manage many student data more easily."
               url="/project/short-projects"
               tags={["PHP", "JavaScript", "MongoDB", "Composer"]}
               date="Last Update 02.02.2023"
