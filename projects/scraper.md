@@ -3,6 +3,7 @@ title: 'Scraper'
 metaTitle: 'Scraper'
 metaDesc: 'This article is about the creation of my scrapers.'
 # website: 'https://anipic.co/'
+github: 'https://github.com/DanielWTE/ebay-kleinanzeigen-api'
 ---
 
 ## What is a scraper?
