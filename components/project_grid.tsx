@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PropTypes from 'prop-types'
 import homelabCover from '../public/homelabCover.png'
 import solunCover from '../public/solunCover.png'
@@ -10,8 +10,8 @@ import educdiaCover from '../public/educdiaCover.png'
 import anipicCover from '../public/anipicCover.png'
 
 
-const ProjectCard = ({ image, title, description, url, tags, date }: any) => {
-  const [loading, setLoading] = useState(false);
+const ProjectCard = ({ image, title, description, url, tags, date } : any) => {
+  const [loading, setLoading] = useState(true);
 
   const handleLoad = () => {
     setLoading(false);
@@ -23,20 +23,22 @@ const ProjectCard = ({ image, title, description, url, tags, date }: any) => {
 
   return (
     <div className="flex flex-col items-center justify-center bg-gray-900 rounded-lg shadow-lg w-80 max-w-80">
-      <div className="w-full h-44 rounded-t-xl overflow-hidden flex justify-center items-center">
+      <div
+        className="w-full h-44 rounded-t-xl overflow-hidden relative"
+      >
         {loading && (
-          <div className="w-full h-full flex justify-center items-center">
+          <div className="absolute inset-0 flex items-center justify-center">
             <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-gray-500"></div>
           </div>
         )}
         <Image
           src={image}
           alt={title}
-          className="object-cover h-full w-full"
+          className={loading ? "hidden" : "block object-cover absolute inset-0 w-full h-full"}
           width="340"
           height="190"
-          onLoad={() => handleLoad()}
-          onError={() => handleError()}
+          onLoadingComplete={handleLoad}
+          onError={handleError}
         />
       </div>
       <div className="flex flex-col items-center justify-start w-full p-4 space-y-2">
@@ -51,14 +53,12 @@ const ProjectCard = ({ image, title, description, url, tags, date }: any) => {
         {/* Link */}
         <div className="flex items-center justify-center w-full">
           <Link href={url}>
-            <a className="text-sm font-bold text-blue-500">
-              Learn More
-            </a>
+            <a className="text-sm font-bold text-blue-500">Learn More</a>
           </Link>
         </div>
         {/* Tags */}
         <div className="flex flex-wrap items-center justify-center w-full">
-          {tags.map((tag: any) => (
+          {tags.map((tag : any) => (
             <div
               key={tag}
               className="px-2 py-1 m-1 text-sm font-medium text-gray-100 bg-gray-700 rounded-full"

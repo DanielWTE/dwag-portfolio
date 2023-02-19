@@ -20,7 +20,7 @@ const Welcomer = () => {
             whileTap={{ scale: 0.9 }}
             onClick={() => toggleOpen()}
           >
-            <Image src={image} alt="Profile Picture" objectFit="contain" height="350px" width="254px" className="rounded-full duration-100"/>
+            <Image src={image} alt="Profile Picture" priority={true} objectFit="contain" height="350px" width="254px" className="rounded-full duration-100"/>
               <motion.path
                 fill="transparent"
                 stroke="white"

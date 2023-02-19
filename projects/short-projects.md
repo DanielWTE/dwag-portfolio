@@ -2,6 +2,7 @@
 title: 'Short Projects'
 metaTitle: 'Short Projects'
 metaDesc: 'This article is about the creation of some short projects.'
+github: 'https://github.com/DanielWTE/project-student-mgmt'
 ---
 
 ## Educdia

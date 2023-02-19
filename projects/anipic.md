@@ -11,7 +11,7 @@ To be serious, I've had the idea right now (18.02.2023).
 AniPic is a website where you can filter and search for frames / images from anime series by entering the anime name, or other tags like "crying", "smiling", "fighting" or "Rainy Weather".
 All frames / images are categorized and tagged by AI and different tools. The AI is detecting what is happening in the image, what is the background, the anime name etc.
 
-So my plan is to destruct a lot of anime series into frames and store them on a media server. Then I will use AI to categorize, tag and finally store them in a database.
+So my plan is to cut up a lot of anime series into frames and store them on a media server. Then I will use AI to categorize, tag and finally store them in a database.
 
 
 The feature list:
