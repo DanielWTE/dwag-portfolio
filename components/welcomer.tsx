@@ -45,7 +45,7 @@ const Welcomer = () => {
                 My Projects
               </a>
             </Link>
-            <Link href="https://resume.dwag.me">
+            <Link href="resume.pdf">
               <a className="font-semibold text-white sm:mt-10 mt-5 pt-5 bg-blue-500 rounded-md w-full sm:w-32 h-16 text-base sm:text-lg hover:bg-gray-700 hover:-translate-y-1 duration-200 ease-in-out transition">
               <FontAwesomeIcon icon={faDownload} /> Resume
               </a>
