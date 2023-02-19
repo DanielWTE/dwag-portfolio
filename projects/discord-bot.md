@@ -3,6 +3,7 @@ title: 'Belle Delphine Discord Bot [NSFW]'
 metaTitle: 'Discord Bot'
 metaDesc: 'This article is about the creation of my Discord Bot.'
 website: 'https://belledelphine.gg/'
+github: 'https://github.com/DanielWTE/belle-delphine-discord-bot'
 ---
 
 ## What is Discord?
