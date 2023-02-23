@@ -1,5 +1,6 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
+import { GoogleAnalytics } from "nextjs-google-analytics";
 
 import Router from 'next/router';
 import NProgress from 'nprogress';
@@ -13,7 +14,14 @@ config.autoAddCss = false;
 Router.events.on('routeChangeStart', () => NProgress.start()); Router.events.on('routeChangeComplete', () => NProgress.done()); Router.events.on('routeChangeError', () => NProgress.done());
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <GoogleAnalytics
+        gaMeasurementId="G-LXTEPCXYFD"
+      />
+      <Component {...pageProps} />
+    </>
+  )
 }
 
 export default MyApp
