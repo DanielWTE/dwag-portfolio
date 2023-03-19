@@ -20,13 +20,11 @@ The feature list:
  
 ## How I will do it
 For AniPic I will use following tools:
-1. PHP, HTML, CSS (Frontend, Backend etc.)
-2. JavaScript (JQuery, AJAX)
-3. MongoDB (Database)
-4. Python (AI, Image processing, etc.)
+1. NextJS & TailWindCSS (Frontend) NodeJS (Backend)
+2. MongoDB (Database)
+3. Python (AI, Image processing, etc.)
 5. Docker (Containerization)
-6. Nginx (Webserver)
-7. A lot of computing power (I will use my own server**s** for this project 😥)
+6. A lot of computing power (I will use my own server**s** for this project 😥)
 
 ## Logo and Name
 Okkayy yeah I know, the logo is not that good. But I'm not a designer, also I've inspired myself from the logo of "anilist.co". Oh yeah the name :D I've just combined "Anime" and "Picture" and it was "AniPic" 😂

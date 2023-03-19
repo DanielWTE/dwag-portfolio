@@ -123,7 +123,7 @@ const Project_grid = () => {
               description="My Homelab is where I host and experiment with self-hosted services and applications."
               url="/project/homelab"
               tags={["Self-hosting", "Virtualization", "Automation", "Networking"]}
-              date="Last Update 01.02.2023"
+              date="Last Update 19.03.2023"
             />
             <ProjectCard
               image={solunCover}
@@ -146,8 +146,8 @@ const Project_grid = () => {
               title="AniPic.co"
               description='AniPic.co is a website where you can find anime pictures which are categorized by AI. Currently in development.'
               url="/project/anipic"
-              tags={["MongoDB", "Linux", "Python", "PHP", "Docker"]}
-              date="Last Update 18.02.2023"
+              tags={["MongoDB", "Linux", "Python", "NextJS", "Docker"]}
+              date="Last Update 19.03.2023"
             />
             <ProjectCard
               image={scraperCover}
