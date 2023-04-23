@@ -27,6 +27,47 @@ For AniPic I will use following tools:
 6. A lot of computing power (I will use my own server**s** for this project 😥)
 
 ## Logo and Name
-Okkayy yeah I know, the logo is not that good. But I'm not a designer, also I've inspired myself from the logo of "anilist.co". Oh yeah the name :D I've just combined "Anime" and "Picture" and it was "AniPic" 😂
+I've just combined "Anime" and "Picture" and it was "AniPic".
 
 ![AniPic Logo](../anipicCover.png)
+
+## What I've done so far
+
+### AniPic Duplicate Check: Efficiently Deleting Duplicate Images
+
+We all know the hassle of manually searching for and deleting duplicate images in a folder. As a continuation of AniPic, I have developed a script that automates this process using a **convolutional autoencoder** and the **mean squared error (MSE)** as a similarity metric. The script displays the images and their MSE value in a tkinter window and creates a log file with the deleted and checked files. It can be run in parallel using the multiprocessing module.
+
+#### How does it work?
+
+The process can be broken down into the following steps:
+
+1. Load the images from the selected folder
+2. Encode the images using a convolutional autoencoder with the following size: 144x81x3
+3. Calculate the MSE between the encoded images
+4. Delete the images with an MSE below a threshold
+
+#### Convolutional Autoencoder
+
+The convolutional autoencoder helps in encoding the images, reducing their dimensionality while preserving their most important features. The autoencoder has two parts: an encoder and a decoder. The encoder reduces the input image's dimensionality, and the decoder reconstructs the original image from the reduced representation. The autoencoder is trained to minimize the difference between the original image and the reconstructed image.
+
+#### Mean Squared Error (MSE)
+
+The mean squared error (MSE) is a metric that measures the average squared difference between two images. It is calculated as the average of the squared differences between the corresponding pixel values of the images. A lower MSE value indicates that the images are more similar.
+
+#### Using the Script
+
+The script takes the following arguments:
+
+* images_folder: Path to the folder containing the images
+* chunk_size: Number of image files in each chunk (default is 5000)
+* threshold: MSE threshold for determining duplicates (default is 0.0007)
+* num_processes: Number of parallel processes for processing the chunks (default is 24)
+* show_gui: Whether to display the tkinter window (default is True)
+
+The tkinter window displays the current and comparison images, MSE value, elapsed time, RAM usage, chunk progress, and the number of deleted files.
+
+#### Conclusion
+
+This script efficiently deletes duplicate images from a folder using a convolutional autoencoder and the mean squared error (MSE) as a similarity metric. It also provides a user-friendly interface using a tkinter window to display the images and their MSE value. With this script, you can effortlessly clean up your image folders and save valuable storage space.
+
+You can find the complete code on the Official AniPic GitHub Repository.
