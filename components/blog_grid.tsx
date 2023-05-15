@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import PropTypes from 'prop-types'
-import mylittleponyCover from '../public/mylittleponyCover.jpg'
+import mylittleponyCover from '../public/mylittleponyCover.png'
 
 const ProjectCard = ({ image, title, description, url } : any) => {
   const [loading, setLoading] = useState(true);
