@@ -128,10 +128,10 @@ const Project_grid = () => {
             <ProjectCard
               image={solunCover}
               title="Solun"
-              description="Solun is my self-built service to send private messages. Files and email services will be available soon."
+              description="Solun is a service that allows you to share files, text and sending emails with end-to-end encryption."
               url="/project/solun"
-              tags={["PHP", "JavaScript", "MySQL", "CSS", "HTML"]}
-              date="Last Update 13.02.2023"
+              tags={["NextJS", "TypeScript", "Tailwind", "NPM", "MongoDB"]}
+              date="Last Update 15.05.2023"
             />
             <ProjectCard
               image={bellebotCover}

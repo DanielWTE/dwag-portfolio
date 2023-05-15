@@ -1,0 +1,21 @@
+---
+title: 'Solun Services'
+metaTitle: 'Solun Services'
+metaDesc: 'This article is about the creation and the idea behind solun.'
+website: 'https://solun.pm'
+github: 'https://github.com/solun-pm'
+---
+
+## What is Solun?
+Solun is a service that allows you to share files, text and sending emails with end-to-end encryption, without having to worry about your privacy.
+
+## What is the purpose of Solun?
+Solun aims to fill the gap in the privacy space and create an independent, open service that allows you to share files, text and send emails with end-to-end encryption - without having to use external services like Whatsapp, Telegram, Signal and more.
+
+## How does Solun work?
+
+### Encrypted Message
+![Encrypted Message](../original/createMessageSolun.gif)
+
+### Encrypted File
+![Encrypted File](../original/uploadFileSolun.gif)

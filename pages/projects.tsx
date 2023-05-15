@@ -16,7 +16,7 @@ const Projects: NextPage = () => {
       </Head>
       <Header />
         <section>
-          <Headercomp />
+          <Headercomp title="Projects" />
         </section>
         <section>
           <Project_grid />

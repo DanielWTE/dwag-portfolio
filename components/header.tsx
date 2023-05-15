@@ -34,9 +34,9 @@ export const Header = ({initialIsOpen} : any) => {
                         <Link href="/projects">
                         <a className={route.pathname == '/projects' ? 'font-bold bg-gray-700 rounded-lg p-2 lg:px-4 md:mx-2 text-slate-100 rounded hover:bg-gray-500 transition-colors duration-300' : " font-bold p-2 lg:px-4 md:mx-2 text-slate-200 rounded hover:bg-gray-500 rounded-lg transition-colors duration-300"}>Projects</a>
                         </Link>
-                        {/* <Link href="/blog">
+                        <Link href="/blog">
                         <a className={route.pathname == '/blog' ? 'font-bold bg-gray-700 rounded-lg p-2 lg:px-4 md:mx-2 text-slate-100 rounded hover:bg-gray-500 transition-colors duration-300' : " font-bold p-2 lg:px-4 md:mx-2 text-slate-200 rounded hover:bg-gray-500 rounded-lg transition-colors duration-300"}>Blog</a>
-                        </Link> */}
+                        </Link>
                     </div>
                 </div>
             </nav>
