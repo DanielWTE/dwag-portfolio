@@ -8,6 +8,7 @@ import bellebotCover from '../public/bellebotCover.png'
 import scraperCover from '../public/scraperCover.png'
 import educdiaCover from '../public/educdiaCover.png'
 import anipicCover from '../public/anipicCover.png'
+import animePortfolioCover from '../public/portfolioKanaArima.gif'
 
 
 const ProjectCard = ({ image, title, description, url, tags, date } : any) => {
@@ -148,6 +149,14 @@ const Project_grid = () => {
               url="/project/anipic"
               tags={["MongoDB", "Linux", "Python", "NextJS", "Docker"]}
               date="Last Update 19.03.2023"
+            />
+            <ProjectCard
+              image={animePortfolioCover}
+              title="Anime Portfolios"
+              description="In this project I will create portfolios for different anime characters. My goal is to improve my design skills!"
+              url="/project/anime-portfolios"
+              tags={["NodeJS", "NPM", "TypeScript", "Tailwind", "Docker"]}
+              date="Last Update 18.05.2023"
             />
             <ProjectCard
               image={scraperCover}
