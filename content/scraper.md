@@ -33,7 +33,7 @@ curl -X GET "http://10.254.1.119/getInserateUrls" -H "accept: application/json"
 {"urls": ["https://www.ebay-kleinanzeigen.de/s-anzeige/xyz", ...]}
 ```
 
-![Scraper Gif 1](../public/scraper1Gif.gif)
+![Scraper Gif 1](../scraper1Gif.gif)
 
 ## Get all data of a listing CURL Example
 
@@ -49,7 +49,7 @@ curl -X GET "http://10.254.1.119/getInseratDetails" -H "accept: application/json
 {"title": "xyz", "price": "1500.00", "images": ["https://img.ebay-kleinanzeigen.de/api/v1/prod-ads/images/81/xyz"], "tags": ["Kleinanzeigen Berlin", "Elektronik", "Handy & Telefon"], "views": "0", "description": "xyz", "uploadDate": "18.02.2023", "adId": "058195681"}
 ```
 
-![Scraper Gif 2](../public/scraper2Gif.gif)
+![Scraper Gif 2](../scraper2Gif.gif)
 
 ## Get updated values of a listing CURL Example
 
@@ -65,7 +65,7 @@ curl -X GET "http://10.254.1.119/getViews" -H "accept: application/json" -H "url
 {"views": "xyz000"}
 ```
 
-![Scraper Gif 3](../public/scraper3Gif.gif)
+![Scraper Gif 3](../scraper3Gif.gif)
 
 ## And when you want to escalate it to the next level?
 
@@ -77,7 +77,7 @@ I've made a few php scripts to get listings, the details and the updated values 
 
 I know it's crappy but it works (for now)
 
-![Scraper Gif 4](../public/scraper4Gif.gif)
+![Scraper Gif 4](../scraper4Gif.gif)
 
 ## How I've do it
 I've used following tools:

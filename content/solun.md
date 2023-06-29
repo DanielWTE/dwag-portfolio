@@ -52,10 +52,10 @@ On the Solun website, users can explore detailed information about the platform 
 
 One of the notable features available is the "One-Time Secret" functionality, which allows users to send confidential messages that will be automatically deleted after the first view. This feature is particularly useful for securely sharing sensitive information such as passwords, credit card details, and other private data.
 
-![Solun One-Time Secret](../public/solunMsg.png)
+![Solun One-Time Secret](../solunMsg.png)
 
 Another notable feature is the "File Sharing" capability, enabling users to upload files and share them with others. These shared files are automatically deleted after a user-defined timeframe, ensuring privacy and control over shared content.
 
-![Solun File Sharing](../public/solunFile.png)
+![Solun File Sharing](../solunFile.png)
 
 All features on the Solun website are accessible without the need to sign up for an account. However, users who wish to use a free email account or add a custom domain must create an account.

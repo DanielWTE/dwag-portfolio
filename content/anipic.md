@@ -29,7 +29,7 @@ For AniPic I will use following tools:
 ## Logo and Name
 I've just combined "Anime" and "Picture" and it was "AniPic".
 
-![AniPic Logo](../public/anipicCover.png)
+![AniPic Logo](../anipicCover.png)
 
 ## What I've done so far
 
@@ -37,7 +37,7 @@ I've just combined "Anime" and "Picture" and it was "AniPic".
 
 We all know the hassle of manually searching for and deleting duplicate images in a folder. As a continuation of AniPic, I have developed a script that automates this process using a **convolutional autoencoder** and the **mean squared error (MSE)** as a similarity metric. The script displays the images and their MSE value in a tkinter window and creates a log file with the deleted and checked files. It can be run in parallel using the multiprocessing module.
 
-![Duplicate Checker Preview](../public/anipic-duplicate-deleter.gif)
+![Duplicate Checker Preview](../anipic-duplicate-deleter.gif)
 
 #### How does it work?
 
