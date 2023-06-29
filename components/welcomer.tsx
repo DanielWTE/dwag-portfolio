@@ -13,7 +13,7 @@ const Welcomer = () => {
   return (
     <div>
       <div className="min-h-100vh clear-both flex align-center justify-center sm:mt-28 mt-12">
-        <div className="px-6 sm:px-12 flex content-center relative right-36 hidden xl:block">
+        <div className="px-6 sm:px-12 hidden content-center relative right-36 xl:block">
           <motion.div
             className="w-300 h-300 rounded-full overflow-hidden relative"
             whileHover={{ scale: 1.1 }}
@@ -39,14 +39,14 @@ const Welcomer = () => {
           <p className="text-base sm:text-lg text-left font-normal mb-5 flex-wrap max-w-md">
             This is my personal website, you can find my projects, something about me, and more here.
           </p>
-          <div className="flex flex-wrap gap-6">
+          <div className="flex gap-4">
             <Link href="/projects">
-              <a className="font-semibold text-white sm:mt-10 mt-5 pt-5 bg-blue-500 rounded-md w-full sm:w-48 h-16 text-base sm:text-lg hover:bg-gray-700 hover:-translate-y-1 duration-200 ease-in-out transition">
+              <a className="font-semibold text-white sm:mt-10 mt-5 pt-5 bg-blue-500 rounded-md w-48 sm:w-48 h-16 text-base sm:text-lg hover:bg-gray-700 hover:-translate-y-1 duration-200 ease-in-out transition">
                 My Projects
               </a>
             </Link>
             <Link href="resume.pdf">
-              <a className="font-semibold text-white sm:mt-10 mt-5 pt-5 bg-blue-500 rounded-md w-full sm:w-32 h-16 text-base sm:text-lg hover:bg-gray-700 hover:-translate-y-1 duration-200 ease-in-out transition">
+              <a className="font-semibold text-white sm:mt-10 mt-5 pt-5 bg-blue-500 rounded-md w-32 sm:w-32 h-16 text-base sm:text-lg hover:bg-gray-700 hover:-translate-y-1 duration-200 ease-in-out transition">
               <FontAwesomeIcon icon={faDownload} /> Resume
               </a>
             </Link>

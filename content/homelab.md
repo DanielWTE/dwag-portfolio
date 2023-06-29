@@ -11,7 +11,7 @@ I installed Proxmox on the server and began to explore its capabilities.
 
 By setting up a few VMs, I learned about networking and how to configure them correctly.
 
-![Server 1](../server1.png)
+![Server 1](../public/server1.png)
 
 ## Expanding: The Second Server
 A few months later, I decided to buy a second server - an HP DL380p. It cost me around 400€, and it was a great deal as well. Unfortunately, I encountered some issues with the server - specifically, a malfunctioning RAID controller. I had to replace it with a new one.
@@ -50,20 +50,20 @@ To maximize the potential of these switches, I bought 500 meters of OM5 fiber ca
 
 As the main connection, I linked the QSFP ports of my MIKROTIK CRS354 and MIKROTIK CRS326-24S-2Q+RM switches, resulting in a 40Gbps connection between the two switches.
 
-![Network Rack](../networkRack.png)
+![Network Rack](../public/networkRack.png)
 
 After that, I connected all my servers to the MIKROTIK CRS326-24S-2Q+RM switch using dual 10Gbps SFP+ connections (LACP) to achieve a total speed of 20Gbps between the server and the switch.
 
 Unfortunately, I encountered significant problems while configuring the switches. I had to reset them multiple times and start from scratch due to configuration errors. Eventually, I got everything working with VLANs.
 
-![Server Switches](../homeLab3.jpg)
+![Server Switches](../public/homeLab3.jpg)
 
 ## Expanding Even Further: More Servers
 With my network up and running, I began to expand my homelab even more by purchasing additional servers:
 1. HP DL360 G8
 2. GigaByte R281-N40
 
-![Servers](../homelabCover.png)
+![Servers](../public/homelabCover.png)
 
 ## The Purpose of My Homelab
 I embarked on my self-hosting journey to learn more about networking and servers in general. Over time, I realized that I could use my homelab for more than just testing and learning. I began using it for public services like my website, password manager, media server, and more.

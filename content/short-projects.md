@@ -18,4 +18,4 @@ I've created the website with following tools:
 
 it was a really simple website with a login, dashboard, student, teacher, class, subject and a grade management system.
 
-![Educdia](../educdiaCover.png)
+![Educdia](../public/educdiaCover.png)

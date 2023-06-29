@@ -42,4 +42,4 @@ The bot is currently in 1.2k servers and it's growing every day.
 
 Maybe I will write a tutorial about how to create a discord bot in the future, and how I've made the Belle Delphine Discord Bot in detail. :)
 
-![Belle Delphine Discord Bot](../bellebotCover.png)
+![Belle Delphine Discord Bot](../public/bellebotCover.png)

@@ -14,6 +14,6 @@ Today, I came up with the idea of creating portfolios for various anime characte
 I have always wanted to create a website with a red theme, so I decided to start with Kana Arima since she has red hair. Moreover, I really admire her character design and personality.
 
 For the concept, I used Figma and drew inspiration from my previous projects. Here's a preview of the Kana Arima portfolio concept:
-![Kana Arima Portfolio](../portfolioKanaArimaConcept.png)
+![Kana Arima Portfolio](../public/portfolioKanaArimaConcept.png)
 To build the website, I utilized NextJS, TailWindCSS, and various other tools. Here's a glimpse of the Kana Arima portfolio website in action:
-![Kana Arima Portfolio](../portfolioKanaArima.gif)
+![Kana Arima Portfolio](../public/portfolioKanaArima.gif)

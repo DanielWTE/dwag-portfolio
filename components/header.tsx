@@ -29,14 +29,16 @@ export const Header = ({initialIsOpen} : any) => {
                     </div>
                     <div className={`flex items-end gap-1 md:flex flex-col md:flex-row md:ml-auto mt-3 md:mt-0 ${isOpen ? "block" : "hidden"}`}>
                         <Link href="/">
-                        <a className={route.pathname == '/' ? 'font-bold bg-gray-700 rounded-lg p-2 lg:px-4 md:mx-2 text-slate-100 rounded hover:bg-gray-500 transition-colors duration-300' : "font-bold p-2 lg:px-4 md:mx-2 text-slate-200 rounded hover:bg-gray-500 rounded-lg transition-colors duration-300"}>Home</a>
+                        <a className={route.pathname == '/' ? 'font-bold bg-gray-700 p-2 lg:px-4 md:mx-2 text-slate-100 rounded hover:bg-gray-500 transition-colors duration-300' : "font-bold p-2 lg:px-4 md:mx-2 text-slate-200 rounded hover:bg-gray-500 rounded-lg transition-colors duration-300"}>Home</a>
                         </Link>
                         <Link href="/projects">
-                        <a className={route.pathname == '/projects' ? 'font-bold bg-gray-700 rounded-lg p-2 lg:px-4 md:mx-2 text-slate-100 rounded hover:bg-gray-500 transition-colors duration-300' : " font-bold p-2 lg:px-4 md:mx-2 text-slate-200 rounded hover:bg-gray-500 rounded-lg transition-colors duration-300"}>Projects</a>
+                        <a className={route.pathname == '/projects' ? 'font-bold bg-gray-700 p-2 lg:px-4 md:mx-2 text-slate-100 rounded hover:bg-gray-500 transition-colors duration-300' : " font-bold p-2 lg:px-4 md:mx-2 text-slate-200 rounded hover:bg-gray-500 rounded-lg transition-colors duration-300"}>Projects</a>
                         </Link>
+                        {/*
                         <Link href="/blog">
-                        <a className={route.pathname == '/blog' ? 'font-bold bg-gray-700 rounded-lg p-2 lg:px-4 md:mx-2 text-slate-100 rounded hover:bg-gray-500 transition-colors duration-300' : " font-bold p-2 lg:px-4 md:mx-2 text-slate-200 rounded hover:bg-gray-500 rounded-lg transition-colors duration-300"}>Blog</a>
+                        <a className={route.pathname == '/blog' ? 'font-bold bg-gray-700 p-2 lg:px-4 md:mx-2 text-slate-100 rounded hover:bg-gray-500 transition-colors duration-300' : " font-bold p-2 lg:px-4 md:mx-2 text-slate-200 rounded hover:bg-gray-500 rounded-lg transition-colors duration-300"}>Blog</a>
                         </Link>
+                        */}
                     </div>
                 </div>
             </nav>

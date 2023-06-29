@@ -132,7 +132,7 @@ const Project_grid = () => {
               description="Solun is a service that allows you to share files, text and sending emails with end-to-end encryption."
               url="/project/solun"
               tags={["NextJS", "TypeScript", "Tailwind", "NPM", "MongoDB"]}
-              date="Last Update 15.05.2023"
+              date="Last Update 29.06.2023"
             />
             <ProjectCard
               image={bellebotCover}
@@ -153,7 +153,7 @@ const Project_grid = () => {
             <ProjectCard
               image={animePortfolioCover}
               title="Anime Portfolios"
-              description="In this project I will create portfolios for different anime characters. My goal is to improve my design skills!"
+              description="In this project I will create portfolios for different anime characters. My goal with this project is to improve my design skills."
               url="/project/anime-portfolios"
               tags={["NodeJS", "NPM", "TypeScript", "Tailwind", "Docker"]}
               date="Last Update 18.05.2023"
