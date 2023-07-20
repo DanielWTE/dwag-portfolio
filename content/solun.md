@@ -109,4 +109,45 @@ So, if the right options are set - we are not able to view the content of your m
 ### Encrypted file upload
 Another notable feature is the "File Sharing" capability, enabling users to upload files and share them with others. These shared files are automatically deleted after a user-defined timeframe, ensuring privacy and control over shared content.
 
+Here we have the same features as above.
+
+If you upload a file to Solun, it gets encrypted after it successfully uploaded, we're using the same techniques from the message feature.
+
+You can find the full code here: [Solun-Server-Encryption-Package@encryption.ts]([https://github.com/solun-pm/solun-general-package/blob/main/src/utils/encryption/clientEncryption.ts](https://github.com/solun-pm/solun-server-encryption-package/blob/main/src/utils/encryption/encryption.ts))
+```typescript
+export async function encryptFile(path: string, key: string, iv: Buffer) {
+  try {
+    const keyBuffer = Buffer.from(key, 'hex');
+    const cipher = crypto.createCipheriv(algorithm, keyBuffer, iv);
+    const fileBuffer = readFileSync(path);
+    const encryptedBuffer = Buffer.concat([cipher.update(fileBuffer), cipher.final()]);
+    
+    writeFileSync(path, encryptedBuffer);
+  } catch (err) {
+    birdLog('encryptFile', err, 'error');
+    console.error(err);
+    return;
+  }
+}
+```
+
+Decrypting process:
+```typescript
+export async function decryptFile(path: string, key: string, iv: string) {
+  try {
+    const keyBuffer = Buffer.from(key, 'hex');
+    const ivBuffer = Buffer.from(iv, 'hex');
+    const encryptedData = readFileSync(path);
+    const decipher = crypto.createDecipheriv(algorithm, keyBuffer, ivBuffer);
+    const decryptedData = Buffer.concat([decipher.update(encryptedData), decipher.final()]);
+    
+    writeFileSync(path, decryptedData);
+  } catch (err) {
+    birdLog('decryptFile', err, 'error');
+    console.error(err);
+    return;
+  }
+}
+```
+
 All features on the Solun website are accessible without the need to sign up for an account. However, users who wish to use a free email account or add a custom domain must create an account.
