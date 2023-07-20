@@ -151,3 +151,9 @@ export async function decryptFile(path: string, key: string, iv: string) {
 ```
 
 All features on the Solun website are accessible without the need to sign up for an account. However, users who wish to use a free email account or add a custom domain must create an account.
+
+## Solun Auth
+The Solun Auth repository contains the frontend code for the Solun Auth website, which is built using Next.js and TypeScript. You can access the website at [https://auth.solun.pm](https://auth.solun.pm).
+Simply said it's just the user dashboard, you can manage your account there and add aliases or custom domains with mailboxes.
+
+Currently we are managing authentication with JWT (JSON Web Token).
