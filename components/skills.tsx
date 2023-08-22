@@ -46,6 +46,7 @@ const Skills = () => {
                 <Widget icon="mongodb" text="MongoDB" />
                 <Widget icon="oracle" text="Oracle" />
                 <Widget icon="git" text="Git" />
+                <Widget icon="docker" text="Docker" />
             </div>
         {/* <div className="font-bold text-2xl text-white flex flex-col align-center justify-center text-center mt-10">
             <h1>
