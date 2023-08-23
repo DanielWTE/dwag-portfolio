@@ -69,6 +69,18 @@ const Project_grid = () => {
           <div className="flex justify-center flex-wrap gap-10 mt-24 mb-24 max-w-screen-xl">
             <ProjectCard
               image={mylittleponyCover}
+              title="How to: A1 VDSL with DrayTek as Modem and OpnSense as Router"
+              description="This article is about how to setup A1 VDSL with a DrayTek Vigor 167 as Modem and OpnSense as Router."
+              url="/article/a1-vdsl-draytek-opnsense"
+            />
+            <ProjectCard
+              image={mylittleponyCover}
+              title="How to: Setup MacOS with IPv6"
+              description="This article is about how to setup MacOS with IPv6."
+              url="/article/macos-ipv6-setup"
+            />
+            <ProjectCard
+              image={mylittleponyCover}
               title="My Little Pony Journey"
               description="A article about my journey into the world of My Little Pony. I will document here how I feel about the series."
               url="/article/my-little-pony"

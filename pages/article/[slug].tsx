@@ -36,6 +36,7 @@ export async function getStaticPaths() {
           <title>dwag - {frontmatter.metaTitle}</title>
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
           <meta name="description" content={frontmatter.metaDesc} />
+          <meta name="keywords" content={frontmatter.metaKeywords} />
         </Head>
         <Header />
         <div className="min-h-screen">
