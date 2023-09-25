@@ -9,6 +9,7 @@ import scraperCover from '../public/scraperCover.png'
 import educdiaCover from '../public/educdiaCover.png'
 import anipicCover from '../public/anipicCover.png'
 import animePortfolioCover from '../public/portfolioKanaArima.gif'
+import kanpaibook from '../public/kanpaibook.png'
 
 
 const ProjectCard = ({ image, title, description, url, tags, date } : any) => {
@@ -133,6 +134,14 @@ const Project_grid = () => {
               url="/project/solun"
               tags={["NextJS", "TypeScript", "Tailwind", "NPM", "MongoDB"]}
               date="Last Update 29.06.2023"
+            />
+            <ProjectCard
+              image={kanpaibook}
+              title="KanpaiBook"
+              description="KanpaiBook is a platform for intuitive and interactive restaurant table reservations."
+              url="/project/kanpaibook"
+              tags={["NextJS", "TypeScript", "Tailwind", "ExpressJS", "MariaDB"]}
+              date="Last Update 25.09.2023"
             />
             <ProjectCard
               image={bellebotCover}
